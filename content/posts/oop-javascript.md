@@ -3,9 +3,9 @@ title: "OOP Javascript"
 date: "2025-09-27"
 summary: "Basic OOP Javascript"
 tags: ["Javascript", "OOP"]
-category: "Tutorial"
+category: "Dev"
 status: "Public"
-type: "Dev"
+type: "Post"
 ---
 
 ## I, OOP là gì
