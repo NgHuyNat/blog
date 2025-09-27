@@ -4,7 +4,7 @@ const CONFIG = {
     name: "Hynat",
     image: "/avatar.jpg",
     role: "backend developer",
-    bio: "I develop everything using node.",
+    bio: "I'm noob developer",
     email: "nghuytan.ptit@gmail.com",
     linkedin: "nghuynat",
     github: "nghuynat",
