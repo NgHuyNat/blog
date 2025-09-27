@@ -1,5 +1,5 @@
 ---
-title: "Cách kết nối tới Postgresql
+title: "Cách kết nối tới Postgresql"
 date: "2025-09-27"
 summary: "Cách khởi động Database Postgresql"
 tags: ["SQL", "Postgresql"]
