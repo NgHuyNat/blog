@@ -46,8 +46,6 @@ Một Promise có thể ở một trong ba trạng thái sau:
 - Fulfilled (hoàn thành): tác vụ đã hoàn thành thành công.
 - Rejected (bị từ chối): tác vụ đã thất bại.
 
-![image.png](attachment:2d623620-b77b-4228-bfaf-de9c2615560c:image.png)
-
 ```jsx
 // Khoi tao 1 promise
 
