@@ -8,6 +8,8 @@ if [ -z "$1" ]; then
 fi
 
 # Chạy các lệnh git
+cd ..
+
 echo "=> 1/3: Thêm tất cả các thay đổi..."
 git add .
 
