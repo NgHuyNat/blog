@@ -14,7 +14,7 @@ Cài đặt extention Urban VPN và đổi VPN sang Mỹ
 
 # Bước 2
 
-Vào link https://gemini.google/students/?hl=en và kiểm tra tài khoản gg đó có offer student không nếu có click và offer
+Vào link https://gemini.google/students và kiểm tra tài khoản gg đó có offer student không, nếu có click vào offer
 
 Nếu không thì làm tương tự trên tài khoản khác cho đến khi được, có thể tạo tk mới nhưng không nhất thiết là tk sinh viên
 
