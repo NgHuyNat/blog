@@ -10,6 +10,8 @@ type: "Post"
 
 # Bước 1
 
+Xóa sạch toàn bộ dữ liệu trang web để web sạch nhất
+
 Cài đặt extention Urban VPN và đổi VPN sang Mỹ
 
 # Bước 2
