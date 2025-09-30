@@ -13,7 +13,15 @@ const PostList: React.FC<Props> = ({ q }) => {
   const data = usePostsQuery()
   const [filteredPosts, setFilteredPosts] = useState(data)
 
-  const currentTag = `${router.query.tag || ``}` || undefined
+  const [currentTags, setCurrentTags] = useState<string[]>([])
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search)
+    const tagsParam = searchParams.get("tags")
+    const tags = tagsParam ? tagsParam.split(",").filter(Boolean) : []
+    setCurrentTags(tags)
+  }, [router.asPath])
+
   const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
   const currentOrder = `${router.query.order || ``}` || "desc"
 
@@ -27,11 +35,14 @@ const PostList: React.FC<Props> = ({ q }) => {
         return searchContent.toLowerCase().includes(q.toLowerCase())
       })
 
-      // tag
-      if (currentTag) {
-        newFilteredPosts = newFilteredPosts.filter(
-          (post) => post && post.tags && post.tags.includes(currentTag)
-        )
+      // tags - filter posts that have ANY of the selected tags
+      if (currentTags.length > 0) {
+        newFilteredPosts = newFilteredPosts.filter((post) => {
+          if (!post || !post.tags) return false
+          return currentTags.some((selectedTag) =>
+            post.tags!.includes(selectedTag)
+          )
+        })
       }
 
       // category
@@ -48,7 +59,7 @@ const PostList: React.FC<Props> = ({ q }) => {
 
       return newFilteredPosts
     })
-  }, [q, currentTag, currentCategory, currentOrder, setFilteredPosts])
+  }, [q, currentTags, currentCategory, currentOrder, data])
 
   return (
     <>

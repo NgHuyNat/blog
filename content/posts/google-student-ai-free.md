@@ -6,31 +6,46 @@ tags: ["AI", "Gemini"]
 category: "Trick"
 status: "Public"
 type: "Post"
+thumbnail: "/images/posts/google-student-ai-free/thumnail.png"
 ---
 
-# Bước 1
+## Bước 1
 
-Xóa sạch toàn bộ dữ liệu trang web để web sạch nhất
+**Xóa sạch toàn bộ dữ liệu trang web để web sạch nhất**
 
-Cài đặt extention Urban VPN và đổi VPN sang Mỹ
+**Cài đặt extention Urban VPN và đổi VPN sang Mỹ**
 
-# Bước 2
+## Bước 2
 
-Vào link https://gemini.google/students và kiểm tra tài khoản gg đó có offer student không, nếu có click vào offer
+Vào link https://gemini.google/students và kiểm tra tài khoản gg đó có offer student không?
+Nếu có click vào offer như hình dưới
 
-Nếu không thì làm tương tự trên tài khoản khác cho đến khi được, có thể tạo tk mới nhưng không nhất thiết là tk sinh viên
+![Gemini Student Offer](/images/posts/google-student-ai-free/image.png)
 
-# Bước 3
+Nếu không thì làm tương tự trên tài khoản khác cho đến khi được<br>
+_Có thể tạo tài khoản mới nhưng không nhất thiết là tài khoản sinh viên_
 
-Copy toàn bộ đường dẫn khi vào được trang xác thực và sau đó lên tele tìm bot id là sheeridverify_bot gõ lệnh /verify [đường dẫn vừa copy]
+## Bước 3
 
-Đợi cho bot chạy(nếu không được thì nạp thêm tiền và thử với tk gg khác)
-Giá rất rẻ chỉ 1k/1 lần chạy verify
+Copy toàn bộ đường dẫn khi vào được trang xác thực và sau đó lên tele tìm bot id là sheeridverify_bot gõ lệnh: /verify `đường dẫn vừa copy`.
 
-# Bước 4
+**Ví dụ:**  
+/verify `https://services.sheerid.com/verify/67c8c14f5f17a83b745e3f82/?verificationId=68d9ec442d23380c673aa8d9&utm_source=gemini&utm_medium=web&utm_campaign`
+
+Đợi cho bot chạy như ảnh bên dưới là được
+
+![Verify Gemini Student Offer](/images/posts/google-student-ai-free/verify_success.png)
+
+Bot chỉ chạy free được 1 lần nên muốn chạy tiếp thì nạp thêm vào, giá chỉ 1k/1 lần và sử dụng lệnh /nap
+
+Ví dụ: Muốn nạp 6000 để chạy 6 lần verify
+
+`/nap 6000`
+
+## Bước 4
 
 Add thẻ visa (không nạp tiền vào thẻ này)
 
-# Bước 5
+## Bước 5
 
 Lụm !
