@@ -8,8 +8,6 @@ status: "Public"
 type: "Post"
 ---
 
-# Install UbuntuServer Error
-
 ## Giới thiệu
 
 Mình đã gặp lỗi khi cố tải UbuntuServer mà nó cứ báo lỗi như ảnh dưới
@@ -28,7 +26,7 @@ Tất cả các ổ không có biểu tượng chìa khóa giống ảnh bên tr
 ```bash
 sudo swapoff -a
 
-sudo swapoff -a
+sudo vgchange -an
 ```
 
 Sau đó vào menu Device → Create Partition Table → Chọn “gpt”, sau đó nhấn “Apply” để xóa sạch mọi metadata cũ
