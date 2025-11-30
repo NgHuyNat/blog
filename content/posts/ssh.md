@@ -170,6 +170,41 @@ sudo systemctl restart sshd
 
 ---
 
+## 6. Trường hợp ngược lại: Tạo Key trên Server và lấy về máy
+
+Đôi khi bạn cần tạo key trên server (ví dụ: để server này truy cập vào GitHub/GitLab hoặc server khác) và bạn muốn lưu private key về máy cá nhân để backup hoặc sử dụng.
+
+### Bước 1: Tạo Key trên Server
+
+SSH vào server và chạy lệnh tạo key như bình thường:
+
+```bash
+ssh-keygen -t ed25519 -C "server-key" -f ~/.ssh/id_ed25519_server
+```
+
+### Bước 2: Lấy Private Key về máy cá nhân
+
+Từ **máy cá nhân** của bạn (không phải trên server), sử dụng lệnh `scp` (Secure Copy) để tải file về:
+
+```bash
+# Cú pháp: scp user@ip-server:path-to-remote-file path-to-local-destination
+scp root@ip-server:~/.ssh/id_ed25519_server ~/.ssh/
+```
+
+### Bước 3: Phân quyền và sử dụng
+
+Sau khi tải về, bạn cần set quyền chỉ đọc cho chủ sở hữu (bắt buộc với SSH key):
+
+```bash
+chmod 600 ~/.ssh/id_ed25519_server
+```
+
+Bây giờ bạn có thể dùng key này để SSH vào server (nếu đã add public key vào `authorized_keys` của server) hoặc dùng cho các mục đích khác.
+
+```bash
+ssh -i ~/.ssh/id_ed25519_server root@ip-server
+```
+
 ## Tổng kết
 
 Với các bước trên, bạn đã thiết lập một môi trường làm việc chuyên nghiệp và bảo mật:
