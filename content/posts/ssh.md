@@ -205,6 +205,46 @@ Bây giờ bạn có thể dùng key này để SSH vào server (nếu đã add 
 ssh -i ~/.ssh/id_ed25519_server root@ip-server
 ```
 
+## 7. Hiểu về `authorized_keys` và Cấu hình thủ công
+
+Lệnh `ssh-copy-id` thực chất chỉ là một cách tự động để thêm public key của bạn vào file `~/.ssh/authorized_keys` trên server. Nếu bạn không dùng được `ssh-copy-id` (ví dụ server không có lệnh này hoặc bạn muốn hiểu rõ bản chất), bạn có thể làm thủ công.
+
+### File `authorized_keys` là gì?
+
+Đây là file nằm trong thư mục `~/.ssh/` của user trên server. Nó chứa danh sách các **Public Key** được phép đăng nhập vào user đó. Mỗi dòng là một public key.
+
+### Cách thêm thủ công (Manual)
+
+1.  **Trên máy cá nhân**: Copy nội dung public key.
+    ```bash
+    cat ~/.ssh/id_ed25519.pub
+    ```
+    Copy toàn bộ chuỗi bắt đầu bằng `ssh-ed25519 ...`.
+
+2.  **Trên Server**:
+    - Tạo thư mục `.ssh` (nếu chưa có):
+      ```bash
+      mkdir -p ~/.ssh
+      chmod 700 ~/.ssh
+      ```
+    - Tạo hoặc sửa file `authorized_keys`:
+      ```bash
+      nano ~/.ssh/authorized_keys
+      ```
+    - Dán public key vào một dòng mới.
+    - Lưu lại.
+
+3.  **Quan trọng: Phân quyền (Permissions)**
+    SSH rất khó tính về quyền truy cập. Nếu bạn để quyền quá lỏng lẻo (ví dụ ai cũng đọc được), SSH sẽ từ chối cho login.
+    
+    ```bash
+    chmod 700 ~/.ssh
+    chmod 600 ~/.ssh/authorized_keys
+    ```
+
+    - `700` cho thư mục: Chỉ chủ sở hữu được đọc, ghi, truy cập.
+    - `600` cho file: Chỉ chủ sở hữu được đọc, ghi.
+
 ## Tổng kết
 
 Với các bước trên, bạn đã thiết lập một môi trường làm việc chuyên nghiệp và bảo mật:
