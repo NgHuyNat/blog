@@ -9,9 +9,6 @@ type: "Post"
 ---
 
 # Hướng Dẫn Sử Dụng Tmux (Theo cấu hình của bạn)
-
-Dựa trên file cấu hình `.tmux.conf` tuyệt vời mà bạn vừa cung cấp, mình đã tổng hợp lại bản hướng dẫn chi tiết này. Bạn đang sử dụng những plugin và thiết lập rất mạnh mẽ!
-
 ---
 
 ## 1. Phím Prefix (Chìa Khóa Cốt Lõi)

@@ -10,7 +10,6 @@ type: "Post"
 
 # Hướng Dẫn Sử Dụng Neovim (Cấu hình LazyVim)
 
-Chào bạn! Dựa trên cấu hình trong máy của bạn, mình thấy bạn đang sử dụng **LazyVim** - một bản phân phối Neovim rất mạnh mẽ và đã được cấu hình sẵn nhiều tính năng hữu ích. Dưới đây là hướng dẫn từ cơ bản đến nâng cao, cũng như các phím tắt được thiết lập riêng cho cấu hình của bạn.
 
 ---
 
